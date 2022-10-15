@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Slide</title>
+    <link rel="stylesheet" href="slideshow.css">
+</head>
+<body>
+    <div id="navbar">
+        <button onclick="slide()" id="start">Start</button>
+        <button onclick="stop()" id="stop">Stop</button>
+         <button id="home" onclick="home()">Home</button>
+    </div>
+
+     <div id="container"></div>
+     <div id="time_text">
+        <p >If you change the time then you enter the time </p>
+        <input placeholder="Enter time" id="number" type="number">
+        <button onclick="tr()" id="csk">Click</button>
+     </div>
+</body>
+</html>
+<script src="slideshow.js"></script>

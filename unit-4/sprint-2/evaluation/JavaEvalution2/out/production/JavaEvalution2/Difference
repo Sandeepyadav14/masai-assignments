@@ -1,0 +1,146 @@
+Question 1;
+1.
+== operator:-
+  *.  == is the operator
+  *.  == operator compare references not value compare.
+  *.  == operator check both references point  same location or not.
+  *.  == operator can not be overridden.
+
+
+   Public class DoubleEqual{
+
+     public static void main(String[] args){
+         String s1="Ramnarayan";
+         String s2=new String ("Ramnarayan");
+         String s3="Ramnarayan";
+         System.out.println(s1==s2);
+         System.out.println(s1==s3);
+
+     }
+
+   }
+  Output=
+  1.False;
+  2.True;
+
+
+
+
+2.
+ equals() method:-
+   *. equals() is a method of a class.
+   *. equals() method is used for content comparison
+   *. equals() method compare value of string for equality.
+
+Public class Equalsl{
+
+     public static void main(String[] args){
+         String s1="ramnarayan";
+         String s2="ramnarayan";
+         String s3="RAMNARAYAN";
+         String s4=new String("ramnarayan");
+
+         System.out.println(s1.equals(s2));
+         System.out.println(s1.equals(s3));
+         System.out.println(s1.equals(s4));
+     }
+
+   }
+  Output=
+  1.True
+  2.False
+  3.True
+
+
+  Question 2:-
+
+  i) Java Strings are immutable:-
+      The  string is immutable means that  we can not change  the current string,but we can change the references of the object.
+      The string is immutable it can help security,,concurrency  and class loading.
+
+
+      Advantage:-
+      We can not change the current string and String class is immutable. Once we create a string a object its data can not be modified.
+      String immutable is saving memory and giving fast performance with more security.
+
+      Disadvantage:-
+      if you modified the string then a new object is created on modification.this is the very costly because this is the large modified object you create.
+
+
+
+  Question 3:-
+
+    i) has-A relationship:-
+       has-A relationship in java we called as a composition. it is additionally utilized for code not usable in java.
+       has-A relationship examples of one of the class has a references  to occasion of another class of similar class.
+
+     code example;-
+       class Address{
+       int road_no:
+       String city;
+       String state;
+       int pin;
+
+       Address(int rodd_no,String city,String state, int pin){
+       this.road_no=road_no;
+       this.city=city;
+       this.state=state;
+       this.pin=pin;
+       }
+       }
+       Class Student{
+       String name;
+       Address ad;
+
+
+       }
+
+
+
+Question 4:-
+
+    import java.util.Scanner;
+
+    public class Printdata{
+
+    public static void main(String[] args){
+      Scanner sc=new Scanner(System.in);
+            System.out.println("Enter Your Name:");
+            String name=sc.next();
+
+            System.out.println("Enter Your Age:");
+            int age=sc.nextInt();
+
+            System.out.println(name+" : "+age );
+    }
+    }
+
+output:-
+Enter Your Name:
+Sandeep
+Enter Your Age:
+20
+Sandeep : 20;
+
+
+
+Question 5:-
+
+public class Doublearray {
+    public static void main(String[] args){
+        int [] arr={1,2,3,4};
+        for(int i=0;i<arr.length;i++){
+            System.out.println(arr[i]*2);
+        }
+    }
+}
+
+output:= 2,4,6,8;
+
+
+
+
+
+
+
+

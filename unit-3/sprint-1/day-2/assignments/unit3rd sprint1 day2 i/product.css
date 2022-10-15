@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#navbar{
+    border: 1px solid red;
+    height:70px;
+    display: flex;
+    background-color: rgb(159, 159, 234);
+    justify-content: space-around;
+}
+h1{
+    margin-top: 15px;
+    cursor: pointer;
+}

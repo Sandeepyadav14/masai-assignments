@@ -1,0 +1,32 @@
+#navbar{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+}
+#user-form{
+    border: 1px solid red;
+    margin-left: 600px;
+    margin-top: 100px;
+    width: 15%;
+    position: absolute;
+
+
+
+    
+}
+#user-form>form{
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+input{
+    display:block;
+    margin-top: 20px;
+}
+#user_country{
+    margin-top: 20px;
+    width: 39%;
+}
+#submit{
+
+}

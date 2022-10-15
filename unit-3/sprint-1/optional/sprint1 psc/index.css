@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#navbar{
+    border: 1px solid red;
+    height: 60px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+}
+h1{
+    margin-top: 5px;
+    cursor: pointer;
+}

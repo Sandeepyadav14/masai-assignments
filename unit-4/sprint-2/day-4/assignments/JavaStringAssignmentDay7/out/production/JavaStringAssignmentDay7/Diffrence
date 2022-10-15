@@ -1,0 +1,12 @@
+
+Creating a string:-
+
+first we create a string assign the string value in " " to string type variable.
+example:-
+String message = "I am studies in J111";
+
+
+ New Operator:-
+ The new keyword by passing the  string value as a parameter of its constructor.
+ example:-
+ String message = new String ("I am studies in J111");

@@ -1,0 +1,48 @@
+
+#order-form{
+    /* border: 1px solid red; */
+    width: 30%;
+    height:430px ;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    position: fixed;
+    margin-left: 30%;
+
+}
+form{
+    border: 1px solid grey;
+    margin: 30px;
+    width: 86%;
+    height: 360px;
+    margin-top: 32px;
+    
+    background-color: aliceblue;
+    
+}
+p{
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    /* margin-top: 30px; */
+}
+input{
+    width: 90%;
+    height: 30px;
+margin-left: 15px;
+}
+#confirm{
+    height: 30px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+    background-color:grey;
+    border-radius: 20px;
+
+}
+#confirm:hover{
+    background-color: aquamarine;
+    color: rgb(1, 32, 1);
+}

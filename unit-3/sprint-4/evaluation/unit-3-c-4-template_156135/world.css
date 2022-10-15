@@ -1,0 +1,38 @@
+
+#slide{
+    border: 1px solid red;
+    width: 20%;
+    height: 800px;
+    display: block;
+    /* margin: auto; */
+}
+#slide>div{
+    display:inline-block;
+  border: 1px solid red;
+  margin-left: 60px;
+}
+#navbar{
+    border: 1px solid red;
+    height: 90px;
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
+}
+#navbar>input{
+    width: 60%;
+    height: 50px;
+    border-radius: 20px;
+}
+#navbar>div
+{
+     justify-content: space-around;
+     
+     border: 1px solid red;
+     /* margin: auto; */
+    display: flex;
+}
+h3{
+    margin-right: 30px;
+    /* border: 1px solid grey; */
+    /* border-radius:5px; */
+}

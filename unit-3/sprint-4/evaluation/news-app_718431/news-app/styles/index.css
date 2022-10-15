@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#navbar{
+    border: 1px solid gray;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(71, 71, 71);
+    display: flex;
+    justify-content: space-around;
+}
+#navbar>h3{
+  margin-top: 24px;
+  color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+#user-form{
+    border: 1px solid gray;
+    margin: auto;
+    width: 30%;
+   margin-top: 30px;
+   width: 500px;
+   background-color: aquamarine;
+}
+#user-form>input{
+    display: block;
+    width: 85%;
+    margin-left: 35px;
+    margin-top: 20px;
+    height: 30px;
+
+}
+select{
+    width: 86%;
+    margin-top: 20px;
+    margin-left: 35px;
+    height: 30px;
+}
+button{
+    width: 86%;
+    margin-top: 20px;
+    margin-left: 35px;
+    height: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    background-color: gray;
+}

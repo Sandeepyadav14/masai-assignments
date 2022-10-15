@@ -1,0 +1,43 @@
+#navbar{
+    border:  1px solid red;
+    display: flex;
+    /* background-color: green; */
+    justify-content: space-around;
+}
+h2{
+    cursor: pointer;
+
+}
+a{
+    text-decoration: none;
+}
+input{
+    width: 30%;
+    margin-top: 13px;
+    height: 30px;
+}
+#sorting{
+    border: 1px solid red;
+    display: flex;
+    background-color: aqua;
+    justify-content: space-around;
+    height: 40px;
+}
+button{
+    height:20px ;
+    margin-top: 10px;
+}
+#hotels_list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+
+}
+#hotels_list>div{
+   width: 100%;
+   border: 1px solid red;
+}
+img{
+    width: 100%;
+}

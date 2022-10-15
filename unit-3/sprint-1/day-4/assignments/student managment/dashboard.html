@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBord</title>
+    <style>
+      *{
+          margin: 0;
+          padding: 0;
+      }
+           .navBar{
+               background-color: #84c6f1;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+            margin-bottom: 20px;
+            height: 20px;
+            padding-top: 25px;
+            padding-bottom: 20px;
+        }
+        .navBar ul{
+            display: flex;
+    list-style: none;
+    justify-content: end;
+    gap: 30px;
+    margin-left: 79%;
+    width: 15%;
+    margin-top: 10px;
+    font-weight: 550;
+    font-size: 20px;
+    }
+        .navBar li,a{
+            color: black;
+            text-decoration: none;
+        }
+        #batchCount{
+            display: flex;
+    list-style: none;
+    width: 77%;
+    margin-bottom: -35px;
+    margin-left: 35px;
+    gap: 20px;
+    font-weight: 550;
+    font-size: 20px;
+
+    }
+        .navBar>li,a{
+            text-decoration: none;
+        }
+
+
+#container div{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(auto,auto);
+   
+border: 1px solid;
+}
+#container>div img{
+width: 90px;
+}
+#container>div p{
+    font-size: 20px;
+    font-weight: 550;
+  margin-top: 40px;
+    position: relative;
+    text-align: center;
+}
+#container>div>button{
+
+  background: #3498db;
+  border-radius: 12px;
+  font-family: Georgia;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px 10px 20px;
+margin: auto;
+}
+#container>div>button:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="navBar">
+        <p id="batchCount">
+        </p>
+        <ul>
+            <a href="dashboard.html"><li>Dashboard</li></a>
+            <a href="index.html"><li>Home</li></a>
+        </ul>
+    </div>
+    <div id="container">
+       
+    </div>
+</body>
+</html>
+
+<script>
+    // append();
+   
+   function append()
+   {
+       let data = JSON.parse(localStorage.getItem("studentInfo"))
+       let container=document.getElementById("container");
+       container.innerText=null;
+
+       data.forEach(function(el,index){
+           let div =document.createElement("div")
+
+           let img=document.createElement("img")
+           img.src=el.image;
+
+           let sName=document.createElement("p")
+           sName.innerText=el.name;
+
+           let sCourse=document.createElement("p")
+           sCourse.innerText=el.course;
+
+           let sUnit=document.createElement("p")
+           sUnit.innerText=el.unit;
+
+           let sBatch=document.createElement("p")
+           sBatch.innerText=el.batch;
+           
+           let btn=document.createElement("button")
+           btn.innerText="Remove";
+           btn.addEventListener("click",function(){
+               
+               remove(index)
+           });
+    
+div.append(img,sName,sCourse,sUnit,sBatch,btn)
+// console.log(img,sName,sCourse,sUnit,sBatch,btn);
+container.append(div);
+       });
+   }
+append()
+
+   function remove(index){
+       console.log(index);
+       let data =JSON.parse(localStorage.getItem("studentInfo"))|| [];
+
+       let newData = data.filter(function(el,i){
+           if(i===index)
+           {
+               let trash=JSON.parse(localStorage.getItem("trash"))|| [];
+               trash.push(el);
+               localStorage.setItem("trash",JSON.stringify(trash));
+
+           }
+           else{
+               return i!==index;
+           }
+       });
+       localStorage.setItem("studentInfo",JSON.stringify(newData));
+       append();
+   }
+
+
+   function count(){
+    let data=JSON.parse(localStorage.getItem("studentInfo"))|| [];
+    let obj=[];
+console.log(data);
+    for(let i=0;i<data.length;i++)
+    {
+      if(!obj[data[i].batch])
+      {
+        obj[data[i].batch]=0;
+      }
+    }
+    for(let i=0;i<data.length;i++)
+    {
+        obj[data[i].batch]++;
+    }
+    for(let key in obj)
+    {
+      let div=document.createElement("div")
+
+      let list=document.createElement("li")
+      list.innerText=key+":"+obj[key];
+
+      div.append(list);
+      document.getElementById("batchCount").append(div)
+    }
+    // console.log(obj);
+}
+count()
+
+</script>

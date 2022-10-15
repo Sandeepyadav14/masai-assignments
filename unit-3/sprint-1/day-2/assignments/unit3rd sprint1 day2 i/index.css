@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#navbar{
+    border: 1px solid red;
+    height:70px;
+    display: flex;
+    background-color: rgb(159, 159, 234);
+    justify-content: space-around;
+}
+h1{
+    margin-top: 15px;
+    cursor: pointer;
+}
+#form_container{
+    border: 1px solid grey;
+    background-color: aquamarine;
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+
+    
+}
+#form{
+    /* width: 40%; */
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+#gender{
+    width: 90%;
+    height: 30px;
+    margin-top: 30px;
+    border: 2px solid grey;
+
+}
+#sold{
+    width: 90%;
+    height: 30px;
+    margin-top: 30px;
+    border: 2px solid grey;
+
+}
+input{
+    display: block;
+    border: 2px solid grey;
+    width: 90%;
+    height: 30px;
+    margin-top: 30px;
+}

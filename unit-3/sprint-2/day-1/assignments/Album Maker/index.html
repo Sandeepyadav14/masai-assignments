@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Maker</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="navbar">
+    <h2>Album</h2>
+    <button id="slide" onclick="get()">Go To slideshow</button>
+    <h2>Maker</h2>
+  </div>
+
+  <div id="text">
+    <p id="url_text">Please click on the image button for enter the image url.</p>
+    <p id="time_text">Please click on the time button for enter time.</p>
+  </div>
+
+    <div id="el">
+    <div><button id="url" onclick="url()">Image</button></div>
+    <div><button id="times" onclick="time()">Time</button></div>
+   </div>
+
+
+
+    <div id="container">
+        <form   id="form" action="">
+        <input placeholder="Enter Image Url" type="url" name="" id="image">
+        <input onclick="getdata(event)" type="submit" name="" id="submit">
+    </form>
+    </div>
+    <div id="time_container">
+        <form id="forms">
+    <input placeholder="Enter Time" id="time" type="number">
+    <input onclick="sandy(event)" type="submit" name="" id="submit_btn">
+    </form>
+    </div>
+    
+    
+</body>
+</html>
+<script src="index.js"></script>

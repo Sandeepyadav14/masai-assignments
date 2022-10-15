@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+div{
+    border: 1px solid gray;
+    width: 25%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #fff
+}
+h1{
+    text-align: center;
+}
+input{
+    display: block;
+    width: 80%;
+    height: 30px;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+button{
+    width: 81%;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-bottom: 35px;
+    background-color: gray;
+    color: #fff;
+    cursor: pointer;
+}

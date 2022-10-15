@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Managment System</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <div id="navbar">
+    <h1>Home</h1>
+    <h1 onclick="dashboard()">Dashboard</h1>
+   </div>
+
+
+    <div id="container">
+        <form onsubmit="getdata(event)" id="form">
+         <input placeholder="name" id="name" type="text">
+         <input placeholder="course" id="course" type="text">
+         <input placeholder="unit" id="unit" type="text">
+         <input placeholder="image" id="image" type="text">
+         <input placeholder="batch" id="batch" type="text">
+         <input id="submit" type="submit">
+
+
+        </form>
+    </div>
+</body>
+</html>
+<script src="index.js"></script>

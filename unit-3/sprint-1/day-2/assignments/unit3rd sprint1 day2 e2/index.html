@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce1</title>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div id="navbar">
+     <h1 onclick="home()" id="home">Home</h1>
+     <h1 onclick="commerce()" id="product">Product</h1>
+
+    </div>
+
+
+
+      <div id="form_container">
+      
+        <form onsubmit="getdata(event)" id="form" action="">
+  
+            <input placeholder="product_name" id="name"  type="text">
+            <input placeholder="category" id="category" type="text">
+            <input placeholder="img_url" id="image" type="text">
+            <input placeholder="price" id="price" type="text">
+            <select id="gender">
+             <option value="male">Male</option>
+             <option value="female">Female</option>
+            </select>
+            <select name="" id="sold">
+              <option value="false">False</option>
+              <option value="true">True</option>
+            </select>
+            <input id="add" type="submit">
+    
+        </form>
+
+
+
+
+
+
+      </div>
+</body>
+</html>
+<script src="index.js"></script>

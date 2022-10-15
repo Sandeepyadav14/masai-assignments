@@ -1,0 +1,145 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#navbar{
+    border: 1px solid grey;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    background-color: aqua;
+}
+#logo{
+    /* border: 1px solid green ; */
+    width: 10%;
+    height: 70px;
+    margin-left: 80px;
+}
+#logo>img{
+    width: 100%;
+    height: 70px;
+}
+#search{
+    width: 40%;
+    height:40px;
+    margin-top: 13px;
+    margin-left: 150px;
+}
+#btn{
+    height: 45px;
+    width: 5%;
+    margin-top: 12.5px;
+}
+#mic{
+    /* border: 1px solid red; */
+    width: 3%;
+    height: 45px;
+    margin-top: 13px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 100px;
+}
+i{
+    font-size: 18px;
+    
+}
+#sign{
+    margin-left: 280px;
+    width: 7%;
+    margin-top: 13px;
+    height: 40px;
+    color: rgb(16, 164, 164);
+    background-color: #fff;
+}
+#list{
+  width: 15%;
+  height: 700px;
+  /* border: 1px solid red; */
+  margin-top: 70px;
+}
+.a{
+    /* border: 1px solid green; */
+    height: 45px;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+}
+.a:hover{
+    background-color: rgb(221, 219, 219);
+}
+#i{
+    margin-left: 30px;
+    margin-top: 13px;
+}
+.text{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: -20px;
+}
+#line{
+    border-top: 1px solid grey;
+    margin-top: 10px;
+}
+#ex{
+    /* margin-top: -30px; */
+    font-weight: bolder;
+    color: rgb(75, 75, 75);
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.b{
+    /* border: 1px solid red; */
+    height: 45px;
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+}
+.b:hover{
+    background-color: rgb(221, 219, 219);
+}
+#font{
+    margin-top: 3px;
+    color: #fff;
+    margin-right: 2px;
+}
+#f{
+    width: 14%;
+    height: 31px;
+    margin-top: 7px;
+    margin-left: 20px;
+    border-radius: 100px;
+    border: none;
+    background-color: rgb(43, 42, 42);
+}
+#divs{
+    /* border: 1px solid grey; */
+    background-color: black;
+    color: #fff;
+    width: 84.5%;
+    /* height: 500px; */
+    margin-left: 231px;
+    margin-top: -695px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+#divs>div{
+border: 1px solid grey;
+width: 100%;
+
+}
+#divs>div>img{
+    width: 100%;
+}

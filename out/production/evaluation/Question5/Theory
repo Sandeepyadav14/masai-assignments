@@ -1,0 +1,147 @@
+
+Q.5
+    a. When should you use LinkedList over ArrayList?
+    b. When should you use a Set over a List?
+    c. What is the difference between final and finally. Write the code for
+    the same.
+    d. What is the difference between throw and throws. Write the code
+    for the same.
+
+Question A:-
+           LinkedList should be used where modification to a collection are frequent like addition
+           or deletion operations. LinkedList is much faster as compare to arraylist in such cases
+
+Question B:-
+            Set should be used creating an unordered collection or list where duplicates values are not
+            allowed.
+            set should be used to create a mathematical set.
+
+Question C:-
+
+
+     Final:-
+            Final is the keyword and access modifier which is used to apply restrictions on a class, method or variable.
+             Once declared, final variable becomes constant and cannot be modified.
+             final method cannot be overridden by sub class.
+             final class cannot be inherited.
+
+             Final method is executed only when we call it.
+
+     Examples:-
+                public class FinalExampleTest {
+
+                    final int age = 40;
+                    void display() {
+                    age = 89;
+                    }
+
+                    public static void main(String[] args) {
+
+                    FinalExampleTest obj = new FinalExampleTest();
+
+                    obj.display();
+                    }
+                }
+    Output:-
+           Compile Time Error.
+
+
+    Finally:-
+              access modifier which is used to apply restrictions on a class, method or variable.
+             finally is the  Exception Handling to execute the important code whether the exception occurs or not.
+             Finally block is always related to the try and catch block in exception handling.
+             finally block cleans up all the resources used in try block
+             Finally block is executed as soon as the try-catch block is executed.
+             It's execution is not dependant on the exception.
+
+    Examples:-
+             public class FinallyExample {
+                   public static void main(String args[]){
+                   try {
+                     System.out.println("Inside try block");
+
+                    int data=25/0;
+                    System.out.println(data);
+                   }
+
+                   catch (ArithmeticException e){
+                     System.out.println("Exception handled");
+
+                   }
+
+                   finally {
+                     System.out.println("finally block is always executed");
+                   }
+                   System.out.println("rest of the code...");
+                   }
+                 }
+    Output:-
+            Inside try block.
+            Exception Handled.
+            finally block always executed.
+            rest of the code.
+
+Question D:-
+       1.Throw keyword is used to Throw an exception object explicity,
+       2. throw keyword always present inside method body;
+       3. We can Throw only one exception at time  Throw is followed by an inside,
+
+      Throw Example =>
+                    public class Final {
+
+                             void div(int a, int b){
+                                 if(b==0){
+                                     throw new ArithmeticException();
+                                 }
+                                 else {
+                                     int c=a/b;
+                                     System.out.println(c);
+
+                                 }
+                             }
+                             public static void main(String[]args){
+                                 Final dm =new Final();
+                                 dm.div(10,0);
+
+                             }
+                             }
+
+                           OUTPUT;
+                           Exception in thread "main" java.lang.ArithmeticException
+                           	at Final.div(Final.java:6)
+                           	at Final.main(Final.java:16)
+
+
+                 Throws,
+                            1. Throws keyword is used to declare an exception as well as by pass the called ,
+                            2.Throws keyword always use with method signatnce we can handle multiple exception using Throws keywaord
+                            3. Throws  is followed by class,
+
+
+                   Example of throws=>
+                        public class Final {
+
+                                 void div(int a, int b) throws ArithmeticException{
+                                      if(b==0){
+                                         throw new ArithmeticException();
+                                       }
+                                      else {
+                                            int c=a/b;
+                                             System.out.println(c);
+
+                                       }
+                                         }
+                                      public static void main(String[]args) throws ArithmeticException{
+                                         Final dm =new Final();
+                                           try {
+                                             dm.div(10,0);
+                                                  }
+                                         catch (Exception e){
+                                              System.out.println("value of zero");
+                                          }
+                                     }
+                                   }
+                             OUTPUT,
+                                     value of zero
+
+

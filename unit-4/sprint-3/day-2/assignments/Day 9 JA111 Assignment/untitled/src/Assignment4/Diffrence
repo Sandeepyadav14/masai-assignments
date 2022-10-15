@@ -1,0 +1,63 @@
+
+
+Q.Explain the difference between overloading and overriding methods with an example?
+
+Overloading:-
+  Two or more methods may have the same name if they differ in parameters (different number of parameters, different types of parameters, or both). These methods are called overloaded methods
+   and this feature is called method overloading.
+
+   Examples:-
+
+        class MethodOverloading {
+            private static void display(int a){
+                System.out.println("Arguments: " + a);
+            }
+
+            private static void display(int a, int b){
+                System.out.println("Arguments: " + a + " and " + b);
+            }
+
+            public static void main(String[] args) {
+                display(1);
+                display(1, 4);
+            }
+        }
+
+
+
+Overriding:-
+           we have defined the run method in the subclass as defined in the parent class but it has some specific implementation. The name and parameter of the method are the same,
+            and there is IS-A relationship between the classes, so there is method overriding.
+
+
+
+
+
+          examples:-
+          class Parent {
+              void show()
+              {
+                  System.out.println("Parent's show()");
+              }
+          }
+
+          // Inherited class
+          class Child extends Parent {
+              // This method overrides show() of Parent
+              @Override
+              void show()
+              {
+                  System.out.println("Child's show()");
+              }
+          }
+          class Main {
+              public static void main(String[] args)
+              {
+                  Parent obj1 = new Parent();
+                  obj1.show();
+
+
+                  Parent obj2 = new Child();
+                  obj2.show();
+              }
+          }

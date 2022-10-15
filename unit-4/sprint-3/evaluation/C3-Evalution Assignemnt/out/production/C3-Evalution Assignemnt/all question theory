@@ -1,0 +1,239 @@
+
+Question 1;
+  abstract class Employee {
+    int employeeId;
+    String employeeName;
+    double salary;
+
+    public Employee(String employeeName) {
+        this.employeeName = employeeName;
+    }
+
+    public Employee(int employeeId) {
+        this.employeeId = employeeId;
+    }
+   abstract double calculateSalary();
+}
+class  PermanentEmployee extends Employee{
+ private double basicPay;
+
+    public PermanentEmployee(String employeeName, double basicPay) {
+        super(employeeName);
+        this.basicPay = basicPay;
+    }
+
+    public PermanentEmployee(int employeeId, double basicPay) {
+        super(employeeId);
+        this.basicPay = basicPay;
+    }
+
+    @Override
+    double calculateSalary() {
+        double PFamount=basicPay*0.12;
+        salary=basicPay-PFamount;
+        return salary;
+    }
+}
+    class TemporaryEmployee extends Employee {
+        private int hoursWorked;
+        private int hourlyWages;
+
+
+
+        public TemporaryEmployee(String employeeName, int hoursWorked, int hourlyWages) {
+            super(employeeName);
+            this.hoursWorked = hoursWorked;
+            this.hourlyWages = hourlyWages;
+        }
+
+        public TemporaryEmployee(int employeeId, int hoursWorked, int hourlyWages) {
+            super(employeeId);
+            this.hoursWorked = hoursWorked;
+            this.hourlyWages = hourlyWages;
+        }
+
+        @Override
+        double calculateSalary() {
+            salary=hourlyWages*hoursWorked;
+            return salary;
+        }
+
+    }
+class Loan{
+    public double calculateLoanAmount(Employee employeeObj){
+        return 0;
+    }
+}
+   class Main{
+       public static void main(String[] args) {
+         Loan l=new Loan();
+         l.calculateLoanAmount(new Employee() {
+
+       }
+    }
+
+
+
+Question 2;
+
+
+package Second;
+import java.util.Scanner;
+public class JavaBean {
+    String name;
+    int marks;
+
+    public JavaBean() {
+        this.name = name;
+        this.marks = marks;
+    }
+@Override
+ public String toString(){
+        System.out.println(name);
+        System.out.print(marks);
+      return null;
+ }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+}
+class Main{
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        JavaBean j=new JavaBean();
+        System.out.println("Enter number of Student");
+        int n=s.nextInt();
+
+        JavaBean student[]=new JavaBean[n];
+        for(int i=0;i<n;i++){
+            JavaBean s1=new JavaBean();
+            System.out.println("Enter the Student Name:");
+            j.name=s.next();
+            System.out.println("Enter the Student Marks:");
+            j.marks=s.nextInt();
+
+            student[i]=j;
+        }
+int sum=0;
+        for(int i=0;i<student.length;i++){
+            System.out.println(student[i].getMarks());
+            System.out.println(student[i].getName());
+            sum=sum+ student[i].getMarks();
+        }
+        int a=sum/n;
+        System.out.println("Average of Student Marks is "+a);
+    }
+}
+
+
+Question 3;
+
+Final Keyword:-
+               The final keyword is used to restrict the user.This final keyword can be used to many context just like:-
+
+               1.Variable;
+               2.Method;
+               3.Class;
+
+Variable:-
+          If we make any variable as final variable then we can not change the value of final variable . and it will be constant.
+
+               Example of final variable :-
+
+               class Count{
+               final int countless=20;
+               void countable(){
+               countless++;
+               }
+
+               public static void main(String[] args){
+               Bike b=new Bike();
+               bike.countable();
+               }
+
+             Output:-Compile Time Error
+
+
+
+
+Method:-
+         If we make a method as final method then we can not override it.
+
+            Example of final method :-
+
+            class Count{
+            final void countable(){
+            System.out.println("This is not override")
+            }
+            class Sandy extends Count{
+            @Override
+            void countable(){
+            System.out.println("Good Morning");
+            }
+
+            public static void main(String[] args){
+              Count c=new Count();
+              c.countable();
+            }
+
+      Output:-Compile Time Error
+
+
+ Class:-
+        The Main purpose of using a class being declared as final is to a prevent the class from being subclasses.
+        if we make a class as final the we can not be inherit any feature from the final class.
+        if you make a class as final then u try it gives as compile time error.
+
+
+       Example:-
+
+       final class Animal{}
+       class Birds extends Animal{
+       void run(){
+       System.out.println("Animal is running");
+       }
+       public static void main(String[] args){
+       Birds b=new Birds();
+       b.run();
+       }
+       }
+
+
+
+Question 4:-
+
+    a.What are the benefits of using an abstract method?
+ ans:- It can have final method, they forced the subclass not to change the body of the method. we can be used an abstract class by inheriting from it  another class and then
+      provide implementations to the abstract methods in it.
+      a class which contains the abstract keyword in this declarations is called a abstract.
+
+       Examples:-
+        abstract class Animal {
+          void eat(){
+              System.out.println("I am eating food");
+         }
+        }
+
+       class Dog extends Animal {
+          @Override
+          void eat() {
+              System.out.println("Dog are eating food");
+              super.eat();
+          }
+
+          public static void main(String[] args) {
+                        Animal obj=new Dog();
+                        obj.eat();
+                    }
+                }
+
+         Output=>Dog are eating food
+
+
+
+

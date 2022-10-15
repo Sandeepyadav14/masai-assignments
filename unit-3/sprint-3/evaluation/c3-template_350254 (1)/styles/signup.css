@@ -1,0 +1,29 @@
+#form{
+    border: 1px solid red;
+    width: 20%;
+    height: 260px;
+    margin-top: 30px;
+  margin: auto;
+}
+h1{
+    text-align: center;
+}
+#form>form{
+    /* border: 1px solid black; */
+    width: 30%;
+    margin-left: 50px;
+    height: 300px;
+}
+input{
+    margin-top: 20px;
+}
+button{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+#navbar{
+    border: 1px solid red;
+    display: flex;
+    height: 50px;
+justify-content: space-around;
+}
