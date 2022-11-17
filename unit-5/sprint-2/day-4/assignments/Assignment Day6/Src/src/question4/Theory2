@@ -1,0 +1,5 @@
+Q5/- What is the Difference between the sleep and join method
+
+There is a difference between join() and sleep(). join() will wait until the timeout expires or the thread finishes.
+sleep() will just wait for the specified amount of time unless interrupted. So it is perfectly possible for join()
+to return much faster than the specified time.30-Dec-2010

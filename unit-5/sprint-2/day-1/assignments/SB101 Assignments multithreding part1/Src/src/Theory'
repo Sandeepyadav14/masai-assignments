@@ -1,0 +1,61 @@
+
+Q1) What do you mean by Multithreading? Why is it important?
+   Multithreading refers to a process of executing two or more threads simultaneously for maximum utilization of the CPU.
+   Multithreading and Multiprocessing are used for multitasking in Java, but we prefer multithreading over multiprocessing.
+   This is because the threads use a shared memory area which helps to save memory,
+    and also, the content-switching between the threads is a bit faster than the process.
+
+
+Q2) What are the benefits of using Multithreading?
+   Multithreading saves time as you can perform multiple operations together.
+   The threads are independent, so it does not block the user to perform multiple operations at the same time and also,
+   if an exception occurs in a single thread, it does not affect other threads.
+
+
+Q3) Differentiate between process and thread.
+Process:-
+       A process is an instance of a program that is being executed. When we run a program, it does not execute directly.
+        It takes some time to follow all the steps required to execute the program,
+        and following these execution steps is known as a process.
+
+
+Thread:-
+        A thread is the subset of a process and is also known as the lightweight process.
+        A process can have more than one thread, and these threads are managed independently by the scheduler.
+        All the threads within one process are interrelated to each other. Threads have some common information,
+        such as data segment, code segment, files, etc., that is shared to their peer threads. But contains its own registers,
+        stack, and counter.
+
+
+
+Q4) What are the different states of a thread, or what is thread lifecycle?
+State:-
+       n Java, to get the current state of the thread, use Thread.getState() method to get the current state of the thread.
+        Java provides java.lang.Thread.State class that defines the ENUM constants for the state of a thread,
+
+Thread Lifecycle:-
+               A thread in Java at any point of time exists in any one of the following states.
+               A thread lies only in one of the shown states at any instant:
+
+    New
+     Runnable
+       Blocked
+       Waiting
+        Timed Waiting
+       Terminated
+
+
+ Q5) Differentiate between the Thread class and Runnable interface for creating a
+ Thread?
+
+
+ Thread:-
+         Each thread creates a unique object and gets associated with it.
+         As each thread create a unique object, more memory required.
+         In Java, multiple inheritance not allowed hence, after a class extends Thread class, it can not extend any other class.
+
+
+ Runnable Interface:-
+                 Multiple threads share the same objects.
+                 As multiple threads share the same object less memory is used.
+                 If a class define thread implementing the Runnable interface it has a chance of extending one class.

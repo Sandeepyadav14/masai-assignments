@@ -1,0 +1,15 @@
+
+Q1) What do you mean by Multithreading? Why is it important?
+   Multithreading refers to a process of executing two or more threads simultaneously for maximum utilization of the CPU.
+   Multithreading and Multiprocessing are used for multitasking in Java, but we prefer multithreading over multiprocessing.
+   This is because the threads use a shared memory area which helps to save memory,
+    and also, the content-switching between the threads is a bit faster than the process.
+
+
+Q2) What are the benefits of using Multithreading?
+   Multithreading saves time as you can perform multiple operations together.
+   The threads are independent, so it does not block the user to perform multiple operations at the same time and also,
+   if an exception occurs in a single thread, it does not affect other threads.
+
+
+Q3) Differentiate between process and thread.

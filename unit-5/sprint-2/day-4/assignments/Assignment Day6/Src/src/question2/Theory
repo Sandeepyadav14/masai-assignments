@@ -1,0 +1,11 @@
+Q2/- What’s the difference between class lock and object lock?
+
+Class Lock:-
+            If a static method is marked as Synchrnozied
+            and called by a Thread, the whole Class will be locked
+            until the method execution completed.
+
+Object lock:-
+             If a non-static method is marked as
+             Synchronzied and called by a Thread, the current instance
+             (Object) will be locked util the method execution completed.

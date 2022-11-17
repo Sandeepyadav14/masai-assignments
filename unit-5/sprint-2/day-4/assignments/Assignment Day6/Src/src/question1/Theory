@@ -1,0 +1,13 @@
+
+
+Q1/ What is the difference between a synchronized method and a synchronized block?
+
+Synchronized block:-
+                    Synchronized block can be used to perform synchronization on any specific resource of the method.
+                    Suppose we have 50 lines of code in our method, but we want to synchronize only 5 lines, in such cases, we can use synchronized block.
+                    If we put all the codes of the method in the synchronized block, it will work same as the synchronized method.
+
+
+Synchronized Method:-
+                    Synchronization in Java is the capability to control the access of multiple threads to any shared resource.
+                    Java Synchronization is better option where we want to allow only one thread to access the shared resource.

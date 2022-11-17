@@ -1,0 +1,58 @@
+  
+
+- How many types of relationships exist among tables in the
+Database? Explain with some examples, and also mention how to
+establish these relationships among tables with examples.
+ANS:-
+    Database relationship means how the data in one table is related to the data in another table. 
+   In RDBMS (Relational Database Management System). The term “Relational” refers to the tables with Relations.
+ Relationships between two tables are created using keys. A key in one table will normally relate to a key in another table.
+ Two tables in a database may also be unrelated. There are mainly 3 types of database relationships:
+
+1. One-to-one Relationship: If only one piece of data in one table relates to only one piece of data
+   In another table, it is known as a one-to-one  relationship.
+2. One-to-many  Relationship: If only one piece of data in one table relates to the multiple data
+    In another table, it is known as the one-to-many elationship.
+3. Many-to-many  Relationship: If multiple data in one table relate to multiple data in another table
+   It is known as a many-to-many relationship.
+
+
+ One-to-One Database Relationship I with examples. 
+Now we will create the database school and within the school database, we will create two tables i.e.
+ Students and Employees, Then we will see the One-To-One Relationship between Students and Employees table.
+   
+
+
+create table student(
+id int primary key, Name char(24) Not Null,
+class int,
+age int);
+
+
+  mysql> select * from student; 
++------+-------+-------+------+                       
+| id   | Name  | class | age  |
++------+-------+-------+------+
+|    1 | sandy  |     6|   11 |
+|    2 | candy  |     4|   16 |
+|    3 | nandu  |    9 |   14 |
+|    4 | sahil |     6 |   13 |
++------+-------+-------+------+
+4 rows in set (0.00 sec)
+ mysql> select * from Employees;
+
+create table Employees(address char(24),
+                         id int,
+                          addressid int);
+                                                  
++----------+------+-----------+
+| address  | id   | addressid |
++----------+------+-----------+
+| mumbai   | 1001 |         1 |
+| delhi    | 1002 |         2 |
+| kolkata  | 1003 |         3 |
+| puna     | 1004 |         4 |
++----------+------+-----------+
+4 rows in set (0.00 sec)
+
+
