@@ -1,0 +1,9 @@
+- Explain the Entity class life-cycle ?
+
+The lifecycle state of a newly instantiated entity object is called transient. The entity hasn’t been
+persisted yet, so it doesn’t represent any database record.
+Your persistence context doesn’t know about your newly instantiate object. Because of that, it doesn’t
+ automatically perform an SQL INSERT statement or tracks any
+ changes. As long as your entity object is in the lifecycle
+ state transient, you can think of it as a basic Java object without any connection to the database and
+  any JPA-specific functionality.

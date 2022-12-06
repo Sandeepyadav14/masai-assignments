@@ -1,0 +1,7 @@
+WHAT DO YOU MEAN BY IOC:
+
+
+  covers the Spring Framework implementation of the Inversion of Control ioc Principle is Di depended injection
+  it's  object process  define  dependencies the other Work only  through  constructor Arguments to a foctory method that set object
+  instence after constructored from returned factory method when create bean container then injection thoes indipendency
+  this procees mean by inverse bean itself controling instantion  or loction by using direct construction or classes
