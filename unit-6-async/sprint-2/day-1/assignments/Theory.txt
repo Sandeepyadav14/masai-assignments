@@ -1,0 +1,9 @@
+Q1/- What are the limitations of EntityManager methods to perform CRUD operations with
+DB?
+
+
+Operations that modify the content of the database (such as storing new objects) require
+ an active transaction. In the example above, every Point object is first constructed as
+ an ordinary Java object. It then becomes associated with an EntityManager and with its 
+transaction (as a managed entity) by the persist method. The new Point objects are 
+physically stored in the database only when the transaction is committed

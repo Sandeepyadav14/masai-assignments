@@ -1,0 +1,50 @@
+Q1/- Limitation of JDBC-based persistence logic over the ORM.
+JDBC persistence logic supports SQL statements based programing, 
+these are database s/w dependent statements. So JDBC persistence
+ logic is database s/w dependent persistence logic.That's means 
+ if we want to change database s/w in the middle of project
+  development it is not possible,we have to re develop JDBC 
+  persistence logic for other database s/w's.
+  To overcome this problem we have to go for ORM -framework s/w's based persistence logic (ex: Hibernate, ibaties, toplink,..etc).
+
+
+Q2.Differentiate between Hibernate and JPA.
+JPA:-
+Java Persistence API (JPA) defines the management of relational data in the Java applications.
+It is just a specification. Various ORM tools implement it for data persistence.
+It is defined in javax.persistence package.
+
+Hibrenate:-
+Hibernate is an Object-Relational Mapping (ORM) tool which is used to save the state of Java object into the database.
+It is one of the most frequently used JPA implementation.
+It is defined in javax.persistence package.	
+It is defined in org.hibernate package.
+
+
+Q3:-
+POJO CLASS:-
+poja class not any implementation or extend class
+poja class field you can craete public ,private and default also;
+pojo class in you can not write setter method;
+pojo class you can not non argument custructor;
+
+JABEAN CLASS:-
+java bean class implementation of serilization;
+java bean class u can filed (variable) only private 
+java bean class you can write getter and setter method;
+java bean class you can not write argument cunstructor;
+
+
+Q4/-Explain about the ORM, what are the benefits of the ORM approach over the
+JDBC approach
+It saves time and efforts.
+It gives pace to development process.
+It reduces the development cost.
+It provides connectivity to the database.
+It makes development more object-oriented.
+Easy transaction management.
+No need to implement database manually.
+
+
+
+

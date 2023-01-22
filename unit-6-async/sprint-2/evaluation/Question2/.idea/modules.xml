@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Qustion2-2/Maven_assignment.iml" filepath="$PROJECT_DIR$/Qustion2-2/Maven_assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Question2-1/Maven_assignment (1).iml" filepath="$PROJECT_DIR$/Question2-1/Maven_assignment (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Question2.iml" filepath="$PROJECT_DIR$/.idea/Question2.iml" />
+    </modules>
+  </component>
+</project>

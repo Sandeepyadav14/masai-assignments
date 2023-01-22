@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="touris" class="Bean.Tourist">
+        <constructor-arg value="1"/>
+        <constructor-arg value="45"/>
+        <constructor-arg value="48584357844"/>
+    </bean>
+    <bean id="holidayPackage" class="Bean.HolidayPackage">
+        <property name="package_name" value="VIP"/>
+        <property name="tourist" ref="touris"/>
+        <property name="package_expiry" value="2023/09/09"/>
+        <property name="package_price" value="34"/>
+
+    </bean>
+</beans>

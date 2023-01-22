@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="person1" class="Bean.Person" >
+        <property name="id" value="1"/>
+        <property name="name" value="Rajkumar"/>
+        <property name="age" value="56"/>
+        <property name="email" value="raj@gmail.com"/>
+        <property name="mobile" value="988343343"/>
+    </bean>
+
+    <bean id="person2" class="Bean.Person" >
+        <property name="id" value="2"/>
+        <property name="name" value="Sachin"/>
+        <property name="age" value="44"/>
+        <property name="email" value="sachin@gmail.com"/>
+        <property name="mobile" value="6856543"/>
+    </bean>
+
+    <bean id="skill1" class="Bean.Skill" >
+        <property name="id" value="1"/>
+        <property name="name" value="HTML"/>
+        <property name="yearsOfExperience" value="20"/>
+    </bean>
+
+    <bean id="skill2" class="Bean.Skill" >
+        <property name="id" value="2"/>
+        <property name="name" value="CSS"/>
+        <property name="yearsOfExperience" value="12"/>
+    </bean>
+
+
+
+
+
+
+
+
+
+    <bean id="personService" class="Service.PersonService" >
+
+        <property name="skillMap">
+
+            <map>
+                <entry key-ref="person1" value-ref="skill1"/>
+                <entry key-ref="person2" value-ref="skill2"/>
+            </map>
+
+        </property>
+
+    </bean>
+    <bean id="personService1" class="Service.PersonService" >
+
+        <property name="personList">
+
+            <list>
+
+                <ref bean="person1" />
+                <ref bean="person2" />
+            </list>
+
+        </property>
+
+    </bean>
+</beans>

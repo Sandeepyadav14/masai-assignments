@@ -1,0 +1,144 @@
+ 1.what do you mean by IOC;
+ Ans: The IoC container is responsible to instantiate, configure and assemble the objects.
+  The IoC container gets informations from the XML file and works accordingly.
+    The main tasks performed by IoC container:
+
+      to instantiate the application class
+      to configure the object
+      to assemble the dependencies between the objects
+      There are two types of IoC containers. They are:
+       1.BeanFactory
+       2.ApplicationContext;
+
+      1.BeanFactory: It is a fundamental container that provides the basic functionality for managing beans.
+                     It supports only Singleton and Prototype bean scopes.
+                     It does not support Annotations. In Bean Autowiring, we need to configure the properties in XML file only.
+
+      2.ApplicationContext: It is an advanced container that extends the BeanFactory that provides all basic functionality and adds some advanced features.
+                            It supports all types of bean scopes such as Singleton, Prototype, Request, Session etc.
+                            It supports Annotation based configuration in Bean Autowiring.
+
+
+
+2. What is Dependency injection? Explain with an example (preferably a simple code).
+Ans: Dependency Injection (DI) is a design pattern that removes the dependency from the Other
+     Class so that it can be easy to manage and test the application. In such case we provide the
+      information from the external source such as XML file. It makes our code loosely coupled and
+       easier for testing. In such case we write the code as:
+
+
+Example: public class A {
+                          	public void sendmasage(String message, String customer){
+                                  // logic to send masage
+
+         		     System.out.println("masages sent to "+customer+ " with Message="+message);
+             }
+         }
+
+         public class B {
+
+         	private A a = new A();
+            // dependency class A is dependent on B
+              //  do some masage valid logic etc
+         	public void processMessages(String msg, String customer){
+         		this.a.sendmasage(msg, customer);
+         		}
+         	}
+
+         	public class Main{
+
+            	public static void main(String[] args) {
+            		B b = new B();
+            		b.processMessages("Hi" ,"sandeep");
+            	}
+
+            }
+
+
+3.Explain Loose Coupling & Tight Coupling with an working code ?
+Ans: 1.TIGHT COUPLING: The tightly coupled object is an object that needs to know about other objects
+     and is usually highly dependent on each other s interfaces,Changing one object
+     in a tightly coupled application often requires changes to a number of other objects.
+     In the small applications we can easily identify the changes and there is low chance
+     to miss anything. But in large applications, hese inter-dependencies are not always known
+     by every claas and there is a chance of overlooking changes.
+
+Example: class A {
+            public int value = 0;
+            public int getA() {
+               System.out.println("This is the get method");
+               return value;
+            }
+            public void setA(int data) {
+               if(!(data > 10))
+                  value = data;
+            }
+         }
+         public class B {
+            public static void main(String[] args) {
+               A a = new A();
+               a.value = 400; // Not suppose to happen as defined by class A, because tight coupling.
+               System.out.println(" value is: " +a.value);
+
+            }
+         }
+output is: "a.value value is: 400";
+
+
+2.LOOSE COUPLING:Loose coupling is a design goal to reduce the inter-dependencies between components of
+                 A system with the goal of reducing the risk that changes in one component will require
+                  changes in any other component Loose coupling is a much more generic concept
+                  intended to increase the flexibility of the system,
+
+Example: class A {
+             private int value= 0;
+             public int getA() {
+                 System.out.println("this is the get method");
+                 return value;
+             }
+             public void setA(int data) {
+                 if(!(data > 10))
+                     value = data;
+             }
+         }
+
+         public class B {
+             public static void main(String[] args) {
+                 A a = new A();
+                 a.setA(250); // No way to set  to such value as this method call will
+                 //  value will be not print  because loose coupling.
+                 System.out.println("value is: " + a.getA());
+             }
+         }
+
+OUTPUT IS:getA() method
+          a value is: 0
+
+
+4.
+Ans: A distributed application is software that is executed or run on multiple computers within a network,
+     These applications interact in order to achieve a specific goal or task, Traditional applications
+     relied on a single system to run them.
+
+     There are 4 types of scales,1.Nominal,2.Ordinal,3.Interval,4.Ratio
+
+
+1.Nominal:The term nominal originates from the Latin word  which implies the meaning “name”.
+          The numbers associated with the variables on a nominal scale are used solely to classify
+          the data; it does not indicate rank or order.
+
+2.Ordinal:The ordinal scale is the opposite of the nominal scale because in this measurement scale
+          the variables are arranged into ranks and orders
+
+3.Interval: An interval scale has ordered numbers with meaningful divisions, the magnitude between
+            intervals are equal Interval scales do not have a true zero i.e In Celsius 0 degrees does
+            not mean the absence of heat.
+           Interval scales have the properties of:
+
+            Identity
+            Magnitude
+            Equal distance
+
+4.Raatio: The ratio scale of measurement is similar to the interval scale in that it also represents
+          quantity and has equality of units with one major difference: zero is  mean no numbers exist below the zero.
+          The true zero allows us to know how many times greater one case is than another.
